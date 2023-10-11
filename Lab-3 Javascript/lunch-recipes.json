@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Chicken Caesar Salad",
+        "image": "chicken-caesar-salad.jpg",
+        "description": "A classic chicken Caesar salad with creamy dressing.",
+        "ingredients": ["2 cups chopped romaine lettuce", "1 grilled chicken breast", "1/4 cup croutons", "2 tbsp Caesar dressing"],
+        "instructions": ["Wash and chop lettuce.", "Grill chicken and slice it.", "Toss lettuce, chicken, croutons, and dressing."]
+    },
+    {
+        "name": "Vegetable Wrap",
+        "image": "vegetable-wrap.jpg",
+        "description": "A healthy and tasty vegetable wrap with hummus.",
+        "ingredients": ["1 large whole wheat tortilla", "1/2 cup hummus", "Assorted veggies (bell peppers, cucumbers, carrots)", "Lettuce leaves"],
+        "instructions": ["Spread hummus on the tortilla.", "Add veggies and lettuce.", "Wrap it up and serve."]
+    }
+]

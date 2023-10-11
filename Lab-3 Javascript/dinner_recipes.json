@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Spaghetti Carbonara",
+        "image": "spaghetti_carbonara.jpg",
+        "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
+        "ingredients": [
+            "200g spaghetti",
+            "2 large eggs",
+            "100g pancetta"
+        ],
+        "instructions": [
+            "Cook spaghetti according to package instructions.",
+            "Fry pancetta until crispy.",
+            "Whisk eggs and cheese, then add cooked spaghetti and pancetta."
+        ]
+    },
+    {
+        "name": "Grilled Salmon",
+        "image": "grilled_salmon.jpg",
+        "description": "Healthy and delicious grilled salmon seasoned with herbs and lemon.",
+        "ingredients": [
+            "4 salmon fillets",
+            "2 tbsp olive oil",
+            "Fresh herbs (e.g., dill, parsley)"
+        ],
+        "instructions": [
+            "Preheat grill. Brush salmon with olive oil and season.",
+            "Grill for 4-5 minutes per side.",
+            "Serve with fresh herbs and lemon wedges."
+        ]
+    }
+]

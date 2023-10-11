@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation and AJAX Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <form id="validation-form">
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <button type="submit" onclick="login">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+
+    function myFunction() {
+      var x = document.getElementById("#modal");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    // Validation function for phone number
+    function validatePhone(phone) {
+      const phoneRegex = /^\d{10}$/;
+      return phoneRegex.test(phone);
+    }
+
+    // Validation function for email
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    // Validation function for password
+    function validatePassword(password) {
+      // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character
+      const passwordRegex = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+      return passwordRegex.test(password);
+    }
+
+    //function validateZip(password) {
+      //const passwordRegex = /^\d{5}$/;
+      //return passwordRegex.test(password);
+    //}
+
+    // DOM manipulation and form submission
+    $(document).ready(function() {
+      $('#validation-form').submit(function(event) {
+        event.preventDefault();
+        const phone = $('#phone').val();
+        const email = $('#email').val();
+        const zip = $('#zip').val();
+
+        if (!validatePhone(phone)) {
+          $('#result').text('Invalid phone number');
+        } else if (!validateEmail(email)) {
+          $('#result').text('Invalid email');
+        } else if (!validatePassword(password)) {
+          $('#result').text('Form Submitted successfully');
+        } else {
+          // Validations passed, perform AJAX request
+          $.ajax({
+            url: 'hello.txt', // Replace with your server endpoint
+            method: 'GET', // or 'GET'
+            data: {
+              phone: phone,
+              email: email,
+              password: password
+            },
+            success: function(response) {
+              $('#result').text('Form submitted successfully');
+              
+            },
+            error: function() {
+              $('#result').text('Error submitting form');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
